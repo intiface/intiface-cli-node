@@ -1,7 +1,7 @@
 syntax = "proto3";
-package ButtplugGuiProtocol;
+package IntifaceGuiProtocol;
 
-option csharp_namespace = "Buttplug.Server.CLI";
+option csharp_namespace = "IntifaceCLI";
 
 message ServerControlMessage {
   message Stop {

@@ -1,12 +1,12 @@
 import * as $protobuf from "protobufjs";
-/** Namespace ButtplugGuiProtocol. */
-export namespace ButtplugGuiProtocol {
+/** Namespace IntifaceGuiProtocol. */
+export namespace IntifaceGuiProtocol {
 
     /** Properties of a ServerControlMessage. */
     interface IServerControlMessage {
 
         /** ServerControlMessage stop */
-        stop?: (ButtplugGuiProtocol.ServerControlMessage.IStop|null);
+        stop?: (IntifaceGuiProtocol.ServerControlMessage.IStop|null);
     }
 
     /** Represents a ServerControlMessage. */
@@ -16,10 +16,10 @@ export namespace ButtplugGuiProtocol {
          * Constructs a new ServerControlMessage.
          * @param [properties] Properties to set
          */
-        constructor(properties?: ButtplugGuiProtocol.IServerControlMessage);
+        constructor(properties?: IntifaceGuiProtocol.IServerControlMessage);
 
         /** ServerControlMessage stop. */
-        public stop?: (ButtplugGuiProtocol.ServerControlMessage.IStop|null);
+        public stop?: (IntifaceGuiProtocol.ServerControlMessage.IStop|null);
 
         /** ServerControlMessage msg. */
         public msg?: "stop";
@@ -29,23 +29,23 @@ export namespace ButtplugGuiProtocol {
          * @param [properties] Properties to set
          * @returns ServerControlMessage instance
          */
-        public static create(properties?: ButtplugGuiProtocol.IServerControlMessage): ButtplugGuiProtocol.ServerControlMessage;
+        public static create(properties?: IntifaceGuiProtocol.IServerControlMessage): IntifaceGuiProtocol.ServerControlMessage;
 
         /**
-         * Encodes the specified ServerControlMessage message. Does not implicitly {@link ButtplugGuiProtocol.ServerControlMessage.verify|verify} messages.
+         * Encodes the specified ServerControlMessage message. Does not implicitly {@link IntifaceGuiProtocol.ServerControlMessage.verify|verify} messages.
          * @param message ServerControlMessage message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encode(message: ButtplugGuiProtocol.IServerControlMessage, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encode(message: IntifaceGuiProtocol.IServerControlMessage, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Encodes the specified ServerControlMessage message, length delimited. Does not implicitly {@link ButtplugGuiProtocol.ServerControlMessage.verify|verify} messages.
+         * Encodes the specified ServerControlMessage message, length delimited. Does not implicitly {@link IntifaceGuiProtocol.ServerControlMessage.verify|verify} messages.
          * @param message ServerControlMessage message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encodeDelimited(message: ButtplugGuiProtocol.IServerControlMessage, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encodeDelimited(message: IntifaceGuiProtocol.IServerControlMessage, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
          * Decodes a ServerControlMessage message from the specified reader or buffer.
@@ -55,7 +55,7 @@ export namespace ButtplugGuiProtocol {
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ButtplugGuiProtocol.ServerControlMessage;
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): IntifaceGuiProtocol.ServerControlMessage;
 
         /**
          * Decodes a ServerControlMessage message from the specified reader or buffer, length delimited.
@@ -64,7 +64,7 @@ export namespace ButtplugGuiProtocol {
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ButtplugGuiProtocol.ServerControlMessage;
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): IntifaceGuiProtocol.ServerControlMessage;
 
         /**
          * Verifies a ServerControlMessage message.
@@ -78,7 +78,7 @@ export namespace ButtplugGuiProtocol {
          * @param object Plain object
          * @returns ServerControlMessage
          */
-        public static fromObject(object: { [k: string]: any }): ButtplugGuiProtocol.ServerControlMessage;
+        public static fromObject(object: { [k: string]: any }): IntifaceGuiProtocol.ServerControlMessage;
 
         /**
          * Creates a plain object from a ServerControlMessage message. Also converts values to other types if specified.
@@ -86,7 +86,7 @@ export namespace ButtplugGuiProtocol {
          * @param [options] Conversion options
          * @returns Plain object
          */
-        public static toObject(message: ButtplugGuiProtocol.ServerControlMessage, options?: $protobuf.IConversionOptions): { [k: string]: any };
+        public static toObject(message: IntifaceGuiProtocol.ServerControlMessage, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
         /**
          * Converts this ServerControlMessage to JSON.
@@ -108,30 +108,30 @@ export namespace ButtplugGuiProtocol {
              * Constructs a new Stop.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ButtplugGuiProtocol.ServerControlMessage.IStop);
+            constructor(properties?: IntifaceGuiProtocol.ServerControlMessage.IStop);
 
             /**
              * Creates a new Stop instance using the specified properties.
              * @param [properties] Properties to set
              * @returns Stop instance
              */
-            public static create(properties?: ButtplugGuiProtocol.ServerControlMessage.IStop): ButtplugGuiProtocol.ServerControlMessage.Stop;
+            public static create(properties?: IntifaceGuiProtocol.ServerControlMessage.IStop): IntifaceGuiProtocol.ServerControlMessage.Stop;
 
             /**
-             * Encodes the specified Stop message. Does not implicitly {@link ButtplugGuiProtocol.ServerControlMessage.Stop.verify|verify} messages.
+             * Encodes the specified Stop message. Does not implicitly {@link IntifaceGuiProtocol.ServerControlMessage.Stop.verify|verify} messages.
              * @param message Stop message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ButtplugGuiProtocol.ServerControlMessage.IStop, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: IntifaceGuiProtocol.ServerControlMessage.IStop, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified Stop message, length delimited. Does not implicitly {@link ButtplugGuiProtocol.ServerControlMessage.Stop.verify|verify} messages.
+             * Encodes the specified Stop message, length delimited. Does not implicitly {@link IntifaceGuiProtocol.ServerControlMessage.Stop.verify|verify} messages.
              * @param message Stop message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ButtplugGuiProtocol.ServerControlMessage.IStop, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: IntifaceGuiProtocol.ServerControlMessage.IStop, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a Stop message from the specified reader or buffer.
@@ -141,7 +141,7 @@ export namespace ButtplugGuiProtocol {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ButtplugGuiProtocol.ServerControlMessage.Stop;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): IntifaceGuiProtocol.ServerControlMessage.Stop;
 
             /**
              * Decodes a Stop message from the specified reader or buffer, length delimited.
@@ -150,7 +150,7 @@ export namespace ButtplugGuiProtocol {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ButtplugGuiProtocol.ServerControlMessage.Stop;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): IntifaceGuiProtocol.ServerControlMessage.Stop;
 
             /**
              * Verifies a Stop message.
@@ -164,7 +164,7 @@ export namespace ButtplugGuiProtocol {
              * @param object Plain object
              * @returns Stop
              */
-            public static fromObject(object: { [k: string]: any }): ButtplugGuiProtocol.ServerControlMessage.Stop;
+            public static fromObject(object: { [k: string]: any }): IntifaceGuiProtocol.ServerControlMessage.Stop;
 
             /**
              * Creates a plain object from a Stop message. Also converts values to other types if specified.
@@ -172,7 +172,7 @@ export namespace ButtplugGuiProtocol {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ButtplugGuiProtocol.ServerControlMessage.Stop, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: IntifaceGuiProtocol.ServerControlMessage.Stop, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this Stop to JSON.
@@ -186,31 +186,31 @@ export namespace ButtplugGuiProtocol {
     interface IServerProcessMessage {
 
         /** ServerProcessMessage processStarted */
-        processStarted?: (ButtplugGuiProtocol.ServerProcessMessage.IProcessStarted|null);
+        processStarted?: (IntifaceGuiProtocol.ServerProcessMessage.IProcessStarted|null);
 
         /** ServerProcessMessage processError */
-        processError?: (ButtplugGuiProtocol.ServerProcessMessage.IProcessError|null);
+        processError?: (IntifaceGuiProtocol.ServerProcessMessage.IProcessError|null);
 
         /** ServerProcessMessage processEnded */
-        processEnded?: (ButtplugGuiProtocol.ServerProcessMessage.IProcessEnded|null);
+        processEnded?: (IntifaceGuiProtocol.ServerProcessMessage.IProcessEnded|null);
 
         /** ServerProcessMessage processLog */
-        processLog?: (ButtplugGuiProtocol.ServerProcessMessage.IProcessLog|null);
+        processLog?: (IntifaceGuiProtocol.ServerProcessMessage.IProcessLog|null);
 
         /** ServerProcessMessage buttplugLog */
-        buttplugLog?: (ButtplugGuiProtocol.ServerProcessMessage.IButtplugLog|null);
+        buttplugLog?: (IntifaceGuiProtocol.ServerProcessMessage.IButtplugLog|null);
 
         /** ServerProcessMessage clientConnected */
-        clientConnected?: (ButtplugGuiProtocol.ServerProcessMessage.IClientConnected|null);
+        clientConnected?: (IntifaceGuiProtocol.ServerProcessMessage.IClientConnected|null);
 
         /** ServerProcessMessage clientDisconnected */
-        clientDisconnected?: (ButtplugGuiProtocol.ServerProcessMessage.IClientDisconnected|null);
+        clientDisconnected?: (IntifaceGuiProtocol.ServerProcessMessage.IClientDisconnected|null);
 
         /** ServerProcessMessage deviceConnected */
-        deviceConnected?: (ButtplugGuiProtocol.ServerProcessMessage.IDeviceConnected|null);
+        deviceConnected?: (IntifaceGuiProtocol.ServerProcessMessage.IDeviceConnected|null);
 
         /** ServerProcessMessage deviceDisconnected */
-        deviceDisconnected?: (ButtplugGuiProtocol.ServerProcessMessage.IDeviceDisconnected|null);
+        deviceDisconnected?: (IntifaceGuiProtocol.ServerProcessMessage.IDeviceDisconnected|null);
     }
 
     /** Represents a ServerProcessMessage. */
@@ -220,34 +220,34 @@ export namespace ButtplugGuiProtocol {
          * Constructs a new ServerProcessMessage.
          * @param [properties] Properties to set
          */
-        constructor(properties?: ButtplugGuiProtocol.IServerProcessMessage);
+        constructor(properties?: IntifaceGuiProtocol.IServerProcessMessage);
 
         /** ServerProcessMessage processStarted. */
-        public processStarted?: (ButtplugGuiProtocol.ServerProcessMessage.IProcessStarted|null);
+        public processStarted?: (IntifaceGuiProtocol.ServerProcessMessage.IProcessStarted|null);
 
         /** ServerProcessMessage processError. */
-        public processError?: (ButtplugGuiProtocol.ServerProcessMessage.IProcessError|null);
+        public processError?: (IntifaceGuiProtocol.ServerProcessMessage.IProcessError|null);
 
         /** ServerProcessMessage processEnded. */
-        public processEnded?: (ButtplugGuiProtocol.ServerProcessMessage.IProcessEnded|null);
+        public processEnded?: (IntifaceGuiProtocol.ServerProcessMessage.IProcessEnded|null);
 
         /** ServerProcessMessage processLog. */
-        public processLog?: (ButtplugGuiProtocol.ServerProcessMessage.IProcessLog|null);
+        public processLog?: (IntifaceGuiProtocol.ServerProcessMessage.IProcessLog|null);
 
         /** ServerProcessMessage buttplugLog. */
-        public buttplugLog?: (ButtplugGuiProtocol.ServerProcessMessage.IButtplugLog|null);
+        public buttplugLog?: (IntifaceGuiProtocol.ServerProcessMessage.IButtplugLog|null);
 
         /** ServerProcessMessage clientConnected. */
-        public clientConnected?: (ButtplugGuiProtocol.ServerProcessMessage.IClientConnected|null);
+        public clientConnected?: (IntifaceGuiProtocol.ServerProcessMessage.IClientConnected|null);
 
         /** ServerProcessMessage clientDisconnected. */
-        public clientDisconnected?: (ButtplugGuiProtocol.ServerProcessMessage.IClientDisconnected|null);
+        public clientDisconnected?: (IntifaceGuiProtocol.ServerProcessMessage.IClientDisconnected|null);
 
         /** ServerProcessMessage deviceConnected. */
-        public deviceConnected?: (ButtplugGuiProtocol.ServerProcessMessage.IDeviceConnected|null);
+        public deviceConnected?: (IntifaceGuiProtocol.ServerProcessMessage.IDeviceConnected|null);
 
         /** ServerProcessMessage deviceDisconnected. */
-        public deviceDisconnected?: (ButtplugGuiProtocol.ServerProcessMessage.IDeviceDisconnected|null);
+        public deviceDisconnected?: (IntifaceGuiProtocol.ServerProcessMessage.IDeviceDisconnected|null);
 
         /** ServerProcessMessage msg. */
         public msg?: ("processStarted"|"processError"|"processEnded"|"processLog"|"buttplugLog"|"clientConnected"|"clientDisconnected"|"deviceConnected"|"deviceDisconnected");
@@ -257,23 +257,23 @@ export namespace ButtplugGuiProtocol {
          * @param [properties] Properties to set
          * @returns ServerProcessMessage instance
          */
-        public static create(properties?: ButtplugGuiProtocol.IServerProcessMessage): ButtplugGuiProtocol.ServerProcessMessage;
+        public static create(properties?: IntifaceGuiProtocol.IServerProcessMessage): IntifaceGuiProtocol.ServerProcessMessage;
 
         /**
-         * Encodes the specified ServerProcessMessage message. Does not implicitly {@link ButtplugGuiProtocol.ServerProcessMessage.verify|verify} messages.
+         * Encodes the specified ServerProcessMessage message. Does not implicitly {@link IntifaceGuiProtocol.ServerProcessMessage.verify|verify} messages.
          * @param message ServerProcessMessage message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encode(message: ButtplugGuiProtocol.IServerProcessMessage, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encode(message: IntifaceGuiProtocol.IServerProcessMessage, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
-         * Encodes the specified ServerProcessMessage message, length delimited. Does not implicitly {@link ButtplugGuiProtocol.ServerProcessMessage.verify|verify} messages.
+         * Encodes the specified ServerProcessMessage message, length delimited. Does not implicitly {@link IntifaceGuiProtocol.ServerProcessMessage.verify|verify} messages.
          * @param message ServerProcessMessage message or plain object to encode
          * @param [writer] Writer to encode to
          * @returns Writer
          */
-        public static encodeDelimited(message: ButtplugGuiProtocol.IServerProcessMessage, writer?: $protobuf.Writer): $protobuf.Writer;
+        public static encodeDelimited(message: IntifaceGuiProtocol.IServerProcessMessage, writer?: $protobuf.Writer): $protobuf.Writer;
 
         /**
          * Decodes a ServerProcessMessage message from the specified reader or buffer.
@@ -283,7 +283,7 @@ export namespace ButtplugGuiProtocol {
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ButtplugGuiProtocol.ServerProcessMessage;
+        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): IntifaceGuiProtocol.ServerProcessMessage;
 
         /**
          * Decodes a ServerProcessMessage message from the specified reader or buffer, length delimited.
@@ -292,7 +292,7 @@ export namespace ButtplugGuiProtocol {
          * @throws {Error} If the payload is not a reader or valid buffer
          * @throws {$protobuf.util.ProtocolError} If required fields are missing
          */
-        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ButtplugGuiProtocol.ServerProcessMessage;
+        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): IntifaceGuiProtocol.ServerProcessMessage;
 
         /**
          * Verifies a ServerProcessMessage message.
@@ -306,7 +306,7 @@ export namespace ButtplugGuiProtocol {
          * @param object Plain object
          * @returns ServerProcessMessage
          */
-        public static fromObject(object: { [k: string]: any }): ButtplugGuiProtocol.ServerProcessMessage;
+        public static fromObject(object: { [k: string]: any }): IntifaceGuiProtocol.ServerProcessMessage;
 
         /**
          * Creates a plain object from a ServerProcessMessage message. Also converts values to other types if specified.
@@ -314,7 +314,7 @@ export namespace ButtplugGuiProtocol {
          * @param [options] Conversion options
          * @returns Plain object
          */
-        public static toObject(message: ButtplugGuiProtocol.ServerProcessMessage, options?: $protobuf.IConversionOptions): { [k: string]: any };
+        public static toObject(message: IntifaceGuiProtocol.ServerProcessMessage, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
         /**
          * Converts this ServerProcessMessage to JSON.
@@ -339,7 +339,7 @@ export namespace ButtplugGuiProtocol {
              * Constructs a new ProcessLog.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ButtplugGuiProtocol.ServerProcessMessage.IProcessLog);
+            constructor(properties?: IntifaceGuiProtocol.ServerProcessMessage.IProcessLog);
 
             /** ProcessLog message. */
             public message: string;
@@ -349,23 +349,23 @@ export namespace ButtplugGuiProtocol {
              * @param [properties] Properties to set
              * @returns ProcessLog instance
              */
-            public static create(properties?: ButtplugGuiProtocol.ServerProcessMessage.IProcessLog): ButtplugGuiProtocol.ServerProcessMessage.ProcessLog;
+            public static create(properties?: IntifaceGuiProtocol.ServerProcessMessage.IProcessLog): IntifaceGuiProtocol.ServerProcessMessage.ProcessLog;
 
             /**
-             * Encodes the specified ProcessLog message. Does not implicitly {@link ButtplugGuiProtocol.ServerProcessMessage.ProcessLog.verify|verify} messages.
+             * Encodes the specified ProcessLog message. Does not implicitly {@link IntifaceGuiProtocol.ServerProcessMessage.ProcessLog.verify|verify} messages.
              * @param message ProcessLog message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ButtplugGuiProtocol.ServerProcessMessage.IProcessLog, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: IntifaceGuiProtocol.ServerProcessMessage.IProcessLog, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified ProcessLog message, length delimited. Does not implicitly {@link ButtplugGuiProtocol.ServerProcessMessage.ProcessLog.verify|verify} messages.
+             * Encodes the specified ProcessLog message, length delimited. Does not implicitly {@link IntifaceGuiProtocol.ServerProcessMessage.ProcessLog.verify|verify} messages.
              * @param message ProcessLog message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ButtplugGuiProtocol.ServerProcessMessage.IProcessLog, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: IntifaceGuiProtocol.ServerProcessMessage.IProcessLog, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a ProcessLog message from the specified reader or buffer.
@@ -375,7 +375,7 @@ export namespace ButtplugGuiProtocol {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ButtplugGuiProtocol.ServerProcessMessage.ProcessLog;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): IntifaceGuiProtocol.ServerProcessMessage.ProcessLog;
 
             /**
              * Decodes a ProcessLog message from the specified reader or buffer, length delimited.
@@ -384,7 +384,7 @@ export namespace ButtplugGuiProtocol {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ButtplugGuiProtocol.ServerProcessMessage.ProcessLog;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): IntifaceGuiProtocol.ServerProcessMessage.ProcessLog;
 
             /**
              * Verifies a ProcessLog message.
@@ -398,7 +398,7 @@ export namespace ButtplugGuiProtocol {
              * @param object Plain object
              * @returns ProcessLog
              */
-            public static fromObject(object: { [k: string]: any }): ButtplugGuiProtocol.ServerProcessMessage.ProcessLog;
+            public static fromObject(object: { [k: string]: any }): IntifaceGuiProtocol.ServerProcessMessage.ProcessLog;
 
             /**
              * Creates a plain object from a ProcessLog message. Also converts values to other types if specified.
@@ -406,7 +406,7 @@ export namespace ButtplugGuiProtocol {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ButtplugGuiProtocol.ServerProcessMessage.ProcessLog, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: IntifaceGuiProtocol.ServerProcessMessage.ProcessLog, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this ProcessLog to JSON.
@@ -426,30 +426,30 @@ export namespace ButtplugGuiProtocol {
              * Constructs a new ProcessStarted.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ButtplugGuiProtocol.ServerProcessMessage.IProcessStarted);
+            constructor(properties?: IntifaceGuiProtocol.ServerProcessMessage.IProcessStarted);
 
             /**
              * Creates a new ProcessStarted instance using the specified properties.
              * @param [properties] Properties to set
              * @returns ProcessStarted instance
              */
-            public static create(properties?: ButtplugGuiProtocol.ServerProcessMessage.IProcessStarted): ButtplugGuiProtocol.ServerProcessMessage.ProcessStarted;
+            public static create(properties?: IntifaceGuiProtocol.ServerProcessMessage.IProcessStarted): IntifaceGuiProtocol.ServerProcessMessage.ProcessStarted;
 
             /**
-             * Encodes the specified ProcessStarted message. Does not implicitly {@link ButtplugGuiProtocol.ServerProcessMessage.ProcessStarted.verify|verify} messages.
+             * Encodes the specified ProcessStarted message. Does not implicitly {@link IntifaceGuiProtocol.ServerProcessMessage.ProcessStarted.verify|verify} messages.
              * @param message ProcessStarted message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ButtplugGuiProtocol.ServerProcessMessage.IProcessStarted, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: IntifaceGuiProtocol.ServerProcessMessage.IProcessStarted, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified ProcessStarted message, length delimited. Does not implicitly {@link ButtplugGuiProtocol.ServerProcessMessage.ProcessStarted.verify|verify} messages.
+             * Encodes the specified ProcessStarted message, length delimited. Does not implicitly {@link IntifaceGuiProtocol.ServerProcessMessage.ProcessStarted.verify|verify} messages.
              * @param message ProcessStarted message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ButtplugGuiProtocol.ServerProcessMessage.IProcessStarted, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: IntifaceGuiProtocol.ServerProcessMessage.IProcessStarted, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a ProcessStarted message from the specified reader or buffer.
@@ -459,7 +459,7 @@ export namespace ButtplugGuiProtocol {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ButtplugGuiProtocol.ServerProcessMessage.ProcessStarted;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): IntifaceGuiProtocol.ServerProcessMessage.ProcessStarted;
 
             /**
              * Decodes a ProcessStarted message from the specified reader or buffer, length delimited.
@@ -468,7 +468,7 @@ export namespace ButtplugGuiProtocol {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ButtplugGuiProtocol.ServerProcessMessage.ProcessStarted;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): IntifaceGuiProtocol.ServerProcessMessage.ProcessStarted;
 
             /**
              * Verifies a ProcessStarted message.
@@ -482,7 +482,7 @@ export namespace ButtplugGuiProtocol {
              * @param object Plain object
              * @returns ProcessStarted
              */
-            public static fromObject(object: { [k: string]: any }): ButtplugGuiProtocol.ServerProcessMessage.ProcessStarted;
+            public static fromObject(object: { [k: string]: any }): IntifaceGuiProtocol.ServerProcessMessage.ProcessStarted;
 
             /**
              * Creates a plain object from a ProcessStarted message. Also converts values to other types if specified.
@@ -490,7 +490,7 @@ export namespace ButtplugGuiProtocol {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ButtplugGuiProtocol.ServerProcessMessage.ProcessStarted, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: IntifaceGuiProtocol.ServerProcessMessage.ProcessStarted, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this ProcessStarted to JSON.
@@ -513,7 +513,7 @@ export namespace ButtplugGuiProtocol {
              * Constructs a new ProcessError.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ButtplugGuiProtocol.ServerProcessMessage.IProcessError);
+            constructor(properties?: IntifaceGuiProtocol.ServerProcessMessage.IProcessError);
 
             /** ProcessError message. */
             public message: string;
@@ -523,23 +523,23 @@ export namespace ButtplugGuiProtocol {
              * @param [properties] Properties to set
              * @returns ProcessError instance
              */
-            public static create(properties?: ButtplugGuiProtocol.ServerProcessMessage.IProcessError): ButtplugGuiProtocol.ServerProcessMessage.ProcessError;
+            public static create(properties?: IntifaceGuiProtocol.ServerProcessMessage.IProcessError): IntifaceGuiProtocol.ServerProcessMessage.ProcessError;
 
             /**
-             * Encodes the specified ProcessError message. Does not implicitly {@link ButtplugGuiProtocol.ServerProcessMessage.ProcessError.verify|verify} messages.
+             * Encodes the specified ProcessError message. Does not implicitly {@link IntifaceGuiProtocol.ServerProcessMessage.ProcessError.verify|verify} messages.
              * @param message ProcessError message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ButtplugGuiProtocol.ServerProcessMessage.IProcessError, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: IntifaceGuiProtocol.ServerProcessMessage.IProcessError, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified ProcessError message, length delimited. Does not implicitly {@link ButtplugGuiProtocol.ServerProcessMessage.ProcessError.verify|verify} messages.
+             * Encodes the specified ProcessError message, length delimited. Does not implicitly {@link IntifaceGuiProtocol.ServerProcessMessage.ProcessError.verify|verify} messages.
              * @param message ProcessError message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ButtplugGuiProtocol.ServerProcessMessage.IProcessError, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: IntifaceGuiProtocol.ServerProcessMessage.IProcessError, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a ProcessError message from the specified reader or buffer.
@@ -549,7 +549,7 @@ export namespace ButtplugGuiProtocol {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ButtplugGuiProtocol.ServerProcessMessage.ProcessError;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): IntifaceGuiProtocol.ServerProcessMessage.ProcessError;
 
             /**
              * Decodes a ProcessError message from the specified reader or buffer, length delimited.
@@ -558,7 +558,7 @@ export namespace ButtplugGuiProtocol {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ButtplugGuiProtocol.ServerProcessMessage.ProcessError;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): IntifaceGuiProtocol.ServerProcessMessage.ProcessError;
 
             /**
              * Verifies a ProcessError message.
@@ -572,7 +572,7 @@ export namespace ButtplugGuiProtocol {
              * @param object Plain object
              * @returns ProcessError
              */
-            public static fromObject(object: { [k: string]: any }): ButtplugGuiProtocol.ServerProcessMessage.ProcessError;
+            public static fromObject(object: { [k: string]: any }): IntifaceGuiProtocol.ServerProcessMessage.ProcessError;
 
             /**
              * Creates a plain object from a ProcessError message. Also converts values to other types if specified.
@@ -580,7 +580,7 @@ export namespace ButtplugGuiProtocol {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ButtplugGuiProtocol.ServerProcessMessage.ProcessError, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: IntifaceGuiProtocol.ServerProcessMessage.ProcessError, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this ProcessError to JSON.
@@ -600,30 +600,30 @@ export namespace ButtplugGuiProtocol {
              * Constructs a new ProcessEnded.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ButtplugGuiProtocol.ServerProcessMessage.IProcessEnded);
+            constructor(properties?: IntifaceGuiProtocol.ServerProcessMessage.IProcessEnded);
 
             /**
              * Creates a new ProcessEnded instance using the specified properties.
              * @param [properties] Properties to set
              * @returns ProcessEnded instance
              */
-            public static create(properties?: ButtplugGuiProtocol.ServerProcessMessage.IProcessEnded): ButtplugGuiProtocol.ServerProcessMessage.ProcessEnded;
+            public static create(properties?: IntifaceGuiProtocol.ServerProcessMessage.IProcessEnded): IntifaceGuiProtocol.ServerProcessMessage.ProcessEnded;
 
             /**
-             * Encodes the specified ProcessEnded message. Does not implicitly {@link ButtplugGuiProtocol.ServerProcessMessage.ProcessEnded.verify|verify} messages.
+             * Encodes the specified ProcessEnded message. Does not implicitly {@link IntifaceGuiProtocol.ServerProcessMessage.ProcessEnded.verify|verify} messages.
              * @param message ProcessEnded message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ButtplugGuiProtocol.ServerProcessMessage.IProcessEnded, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: IntifaceGuiProtocol.ServerProcessMessage.IProcessEnded, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified ProcessEnded message, length delimited. Does not implicitly {@link ButtplugGuiProtocol.ServerProcessMessage.ProcessEnded.verify|verify} messages.
+             * Encodes the specified ProcessEnded message, length delimited. Does not implicitly {@link IntifaceGuiProtocol.ServerProcessMessage.ProcessEnded.verify|verify} messages.
              * @param message ProcessEnded message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ButtplugGuiProtocol.ServerProcessMessage.IProcessEnded, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: IntifaceGuiProtocol.ServerProcessMessage.IProcessEnded, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a ProcessEnded message from the specified reader or buffer.
@@ -633,7 +633,7 @@ export namespace ButtplugGuiProtocol {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ButtplugGuiProtocol.ServerProcessMessage.ProcessEnded;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): IntifaceGuiProtocol.ServerProcessMessage.ProcessEnded;
 
             /**
              * Decodes a ProcessEnded message from the specified reader or buffer, length delimited.
@@ -642,7 +642,7 @@ export namespace ButtplugGuiProtocol {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ButtplugGuiProtocol.ServerProcessMessage.ProcessEnded;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): IntifaceGuiProtocol.ServerProcessMessage.ProcessEnded;
 
             /**
              * Verifies a ProcessEnded message.
@@ -656,7 +656,7 @@ export namespace ButtplugGuiProtocol {
              * @param object Plain object
              * @returns ProcessEnded
              */
-            public static fromObject(object: { [k: string]: any }): ButtplugGuiProtocol.ServerProcessMessage.ProcessEnded;
+            public static fromObject(object: { [k: string]: any }): IntifaceGuiProtocol.ServerProcessMessage.ProcessEnded;
 
             /**
              * Creates a plain object from a ProcessEnded message. Also converts values to other types if specified.
@@ -664,7 +664,7 @@ export namespace ButtplugGuiProtocol {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ButtplugGuiProtocol.ServerProcessMessage.ProcessEnded, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: IntifaceGuiProtocol.ServerProcessMessage.ProcessEnded, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this ProcessEnded to JSON.
@@ -687,7 +687,7 @@ export namespace ButtplugGuiProtocol {
              * Constructs a new ButtplugLog.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ButtplugGuiProtocol.ServerProcessMessage.IButtplugLog);
+            constructor(properties?: IntifaceGuiProtocol.ServerProcessMessage.IButtplugLog);
 
             /** ButtplugLog message. */
             public message: string;
@@ -697,23 +697,23 @@ export namespace ButtplugGuiProtocol {
              * @param [properties] Properties to set
              * @returns ButtplugLog instance
              */
-            public static create(properties?: ButtplugGuiProtocol.ServerProcessMessage.IButtplugLog): ButtplugGuiProtocol.ServerProcessMessage.ButtplugLog;
+            public static create(properties?: IntifaceGuiProtocol.ServerProcessMessage.IButtplugLog): IntifaceGuiProtocol.ServerProcessMessage.ButtplugLog;
 
             /**
-             * Encodes the specified ButtplugLog message. Does not implicitly {@link ButtplugGuiProtocol.ServerProcessMessage.ButtplugLog.verify|verify} messages.
+             * Encodes the specified ButtplugLog message. Does not implicitly {@link IntifaceGuiProtocol.ServerProcessMessage.ButtplugLog.verify|verify} messages.
              * @param message ButtplugLog message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ButtplugGuiProtocol.ServerProcessMessage.IButtplugLog, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: IntifaceGuiProtocol.ServerProcessMessage.IButtplugLog, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified ButtplugLog message, length delimited. Does not implicitly {@link ButtplugGuiProtocol.ServerProcessMessage.ButtplugLog.verify|verify} messages.
+             * Encodes the specified ButtplugLog message, length delimited. Does not implicitly {@link IntifaceGuiProtocol.ServerProcessMessage.ButtplugLog.verify|verify} messages.
              * @param message ButtplugLog message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ButtplugGuiProtocol.ServerProcessMessage.IButtplugLog, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: IntifaceGuiProtocol.ServerProcessMessage.IButtplugLog, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a ButtplugLog message from the specified reader or buffer.
@@ -723,7 +723,7 @@ export namespace ButtplugGuiProtocol {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ButtplugGuiProtocol.ServerProcessMessage.ButtplugLog;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): IntifaceGuiProtocol.ServerProcessMessage.ButtplugLog;
 
             /**
              * Decodes a ButtplugLog message from the specified reader or buffer, length delimited.
@@ -732,7 +732,7 @@ export namespace ButtplugGuiProtocol {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ButtplugGuiProtocol.ServerProcessMessage.ButtplugLog;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): IntifaceGuiProtocol.ServerProcessMessage.ButtplugLog;
 
             /**
              * Verifies a ButtplugLog message.
@@ -746,7 +746,7 @@ export namespace ButtplugGuiProtocol {
              * @param object Plain object
              * @returns ButtplugLog
              */
-            public static fromObject(object: { [k: string]: any }): ButtplugGuiProtocol.ServerProcessMessage.ButtplugLog;
+            public static fromObject(object: { [k: string]: any }): IntifaceGuiProtocol.ServerProcessMessage.ButtplugLog;
 
             /**
              * Creates a plain object from a ButtplugLog message. Also converts values to other types if specified.
@@ -754,7 +754,7 @@ export namespace ButtplugGuiProtocol {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ButtplugGuiProtocol.ServerProcessMessage.ButtplugLog, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: IntifaceGuiProtocol.ServerProcessMessage.ButtplugLog, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this ButtplugLog to JSON.
@@ -777,7 +777,7 @@ export namespace ButtplugGuiProtocol {
              * Constructs a new ClientConnected.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ButtplugGuiProtocol.ServerProcessMessage.IClientConnected);
+            constructor(properties?: IntifaceGuiProtocol.ServerProcessMessage.IClientConnected);
 
             /** ClientConnected clientName. */
             public clientName: string;
@@ -787,23 +787,23 @@ export namespace ButtplugGuiProtocol {
              * @param [properties] Properties to set
              * @returns ClientConnected instance
              */
-            public static create(properties?: ButtplugGuiProtocol.ServerProcessMessage.IClientConnected): ButtplugGuiProtocol.ServerProcessMessage.ClientConnected;
+            public static create(properties?: IntifaceGuiProtocol.ServerProcessMessage.IClientConnected): IntifaceGuiProtocol.ServerProcessMessage.ClientConnected;
 
             /**
-             * Encodes the specified ClientConnected message. Does not implicitly {@link ButtplugGuiProtocol.ServerProcessMessage.ClientConnected.verify|verify} messages.
+             * Encodes the specified ClientConnected message. Does not implicitly {@link IntifaceGuiProtocol.ServerProcessMessage.ClientConnected.verify|verify} messages.
              * @param message ClientConnected message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ButtplugGuiProtocol.ServerProcessMessage.IClientConnected, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: IntifaceGuiProtocol.ServerProcessMessage.IClientConnected, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified ClientConnected message, length delimited. Does not implicitly {@link ButtplugGuiProtocol.ServerProcessMessage.ClientConnected.verify|verify} messages.
+             * Encodes the specified ClientConnected message, length delimited. Does not implicitly {@link IntifaceGuiProtocol.ServerProcessMessage.ClientConnected.verify|verify} messages.
              * @param message ClientConnected message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ButtplugGuiProtocol.ServerProcessMessage.IClientConnected, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: IntifaceGuiProtocol.ServerProcessMessage.IClientConnected, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a ClientConnected message from the specified reader or buffer.
@@ -813,7 +813,7 @@ export namespace ButtplugGuiProtocol {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ButtplugGuiProtocol.ServerProcessMessage.ClientConnected;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): IntifaceGuiProtocol.ServerProcessMessage.ClientConnected;
 
             /**
              * Decodes a ClientConnected message from the specified reader or buffer, length delimited.
@@ -822,7 +822,7 @@ export namespace ButtplugGuiProtocol {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ButtplugGuiProtocol.ServerProcessMessage.ClientConnected;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): IntifaceGuiProtocol.ServerProcessMessage.ClientConnected;
 
             /**
              * Verifies a ClientConnected message.
@@ -836,7 +836,7 @@ export namespace ButtplugGuiProtocol {
              * @param object Plain object
              * @returns ClientConnected
              */
-            public static fromObject(object: { [k: string]: any }): ButtplugGuiProtocol.ServerProcessMessage.ClientConnected;
+            public static fromObject(object: { [k: string]: any }): IntifaceGuiProtocol.ServerProcessMessage.ClientConnected;
 
             /**
              * Creates a plain object from a ClientConnected message. Also converts values to other types if specified.
@@ -844,7 +844,7 @@ export namespace ButtplugGuiProtocol {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ButtplugGuiProtocol.ServerProcessMessage.ClientConnected, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: IntifaceGuiProtocol.ServerProcessMessage.ClientConnected, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this ClientConnected to JSON.
@@ -864,30 +864,30 @@ export namespace ButtplugGuiProtocol {
              * Constructs a new ClientDisconnected.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ButtplugGuiProtocol.ServerProcessMessage.IClientDisconnected);
+            constructor(properties?: IntifaceGuiProtocol.ServerProcessMessage.IClientDisconnected);
 
             /**
              * Creates a new ClientDisconnected instance using the specified properties.
              * @param [properties] Properties to set
              * @returns ClientDisconnected instance
              */
-            public static create(properties?: ButtplugGuiProtocol.ServerProcessMessage.IClientDisconnected): ButtplugGuiProtocol.ServerProcessMessage.ClientDisconnected;
+            public static create(properties?: IntifaceGuiProtocol.ServerProcessMessage.IClientDisconnected): IntifaceGuiProtocol.ServerProcessMessage.ClientDisconnected;
 
             /**
-             * Encodes the specified ClientDisconnected message. Does not implicitly {@link ButtplugGuiProtocol.ServerProcessMessage.ClientDisconnected.verify|verify} messages.
+             * Encodes the specified ClientDisconnected message. Does not implicitly {@link IntifaceGuiProtocol.ServerProcessMessage.ClientDisconnected.verify|verify} messages.
              * @param message ClientDisconnected message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ButtplugGuiProtocol.ServerProcessMessage.IClientDisconnected, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: IntifaceGuiProtocol.ServerProcessMessage.IClientDisconnected, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified ClientDisconnected message, length delimited. Does not implicitly {@link ButtplugGuiProtocol.ServerProcessMessage.ClientDisconnected.verify|verify} messages.
+             * Encodes the specified ClientDisconnected message, length delimited. Does not implicitly {@link IntifaceGuiProtocol.ServerProcessMessage.ClientDisconnected.verify|verify} messages.
              * @param message ClientDisconnected message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ButtplugGuiProtocol.ServerProcessMessage.IClientDisconnected, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: IntifaceGuiProtocol.ServerProcessMessage.IClientDisconnected, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a ClientDisconnected message from the specified reader or buffer.
@@ -897,7 +897,7 @@ export namespace ButtplugGuiProtocol {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ButtplugGuiProtocol.ServerProcessMessage.ClientDisconnected;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): IntifaceGuiProtocol.ServerProcessMessage.ClientDisconnected;
 
             /**
              * Decodes a ClientDisconnected message from the specified reader or buffer, length delimited.
@@ -906,7 +906,7 @@ export namespace ButtplugGuiProtocol {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ButtplugGuiProtocol.ServerProcessMessage.ClientDisconnected;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): IntifaceGuiProtocol.ServerProcessMessage.ClientDisconnected;
 
             /**
              * Verifies a ClientDisconnected message.
@@ -920,7 +920,7 @@ export namespace ButtplugGuiProtocol {
              * @param object Plain object
              * @returns ClientDisconnected
              */
-            public static fromObject(object: { [k: string]: any }): ButtplugGuiProtocol.ServerProcessMessage.ClientDisconnected;
+            public static fromObject(object: { [k: string]: any }): IntifaceGuiProtocol.ServerProcessMessage.ClientDisconnected;
 
             /**
              * Creates a plain object from a ClientDisconnected message. Also converts values to other types if specified.
@@ -928,7 +928,7 @@ export namespace ButtplugGuiProtocol {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ButtplugGuiProtocol.ServerProcessMessage.ClientDisconnected, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: IntifaceGuiProtocol.ServerProcessMessage.ClientDisconnected, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this ClientDisconnected to JSON.
@@ -954,7 +954,7 @@ export namespace ButtplugGuiProtocol {
              * Constructs a new DeviceConnected.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ButtplugGuiProtocol.ServerProcessMessage.IDeviceConnected);
+            constructor(properties?: IntifaceGuiProtocol.ServerProcessMessage.IDeviceConnected);
 
             /** DeviceConnected deviceName. */
             public deviceName: string;
@@ -967,23 +967,23 @@ export namespace ButtplugGuiProtocol {
              * @param [properties] Properties to set
              * @returns DeviceConnected instance
              */
-            public static create(properties?: ButtplugGuiProtocol.ServerProcessMessage.IDeviceConnected): ButtplugGuiProtocol.ServerProcessMessage.DeviceConnected;
+            public static create(properties?: IntifaceGuiProtocol.ServerProcessMessage.IDeviceConnected): IntifaceGuiProtocol.ServerProcessMessage.DeviceConnected;
 
             /**
-             * Encodes the specified DeviceConnected message. Does not implicitly {@link ButtplugGuiProtocol.ServerProcessMessage.DeviceConnected.verify|verify} messages.
+             * Encodes the specified DeviceConnected message. Does not implicitly {@link IntifaceGuiProtocol.ServerProcessMessage.DeviceConnected.verify|verify} messages.
              * @param message DeviceConnected message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ButtplugGuiProtocol.ServerProcessMessage.IDeviceConnected, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: IntifaceGuiProtocol.ServerProcessMessage.IDeviceConnected, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified DeviceConnected message, length delimited. Does not implicitly {@link ButtplugGuiProtocol.ServerProcessMessage.DeviceConnected.verify|verify} messages.
+             * Encodes the specified DeviceConnected message, length delimited. Does not implicitly {@link IntifaceGuiProtocol.ServerProcessMessage.DeviceConnected.verify|verify} messages.
              * @param message DeviceConnected message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ButtplugGuiProtocol.ServerProcessMessage.IDeviceConnected, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: IntifaceGuiProtocol.ServerProcessMessage.IDeviceConnected, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a DeviceConnected message from the specified reader or buffer.
@@ -993,7 +993,7 @@ export namespace ButtplugGuiProtocol {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ButtplugGuiProtocol.ServerProcessMessage.DeviceConnected;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): IntifaceGuiProtocol.ServerProcessMessage.DeviceConnected;
 
             /**
              * Decodes a DeviceConnected message from the specified reader or buffer, length delimited.
@@ -1002,7 +1002,7 @@ export namespace ButtplugGuiProtocol {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ButtplugGuiProtocol.ServerProcessMessage.DeviceConnected;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): IntifaceGuiProtocol.ServerProcessMessage.DeviceConnected;
 
             /**
              * Verifies a DeviceConnected message.
@@ -1016,7 +1016,7 @@ export namespace ButtplugGuiProtocol {
              * @param object Plain object
              * @returns DeviceConnected
              */
-            public static fromObject(object: { [k: string]: any }): ButtplugGuiProtocol.ServerProcessMessage.DeviceConnected;
+            public static fromObject(object: { [k: string]: any }): IntifaceGuiProtocol.ServerProcessMessage.DeviceConnected;
 
             /**
              * Creates a plain object from a DeviceConnected message. Also converts values to other types if specified.
@@ -1024,7 +1024,7 @@ export namespace ButtplugGuiProtocol {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ButtplugGuiProtocol.ServerProcessMessage.DeviceConnected, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: IntifaceGuiProtocol.ServerProcessMessage.DeviceConnected, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this DeviceConnected to JSON.
@@ -1047,7 +1047,7 @@ export namespace ButtplugGuiProtocol {
              * Constructs a new DeviceDisconnected.
              * @param [properties] Properties to set
              */
-            constructor(properties?: ButtplugGuiProtocol.ServerProcessMessage.IDeviceDisconnected);
+            constructor(properties?: IntifaceGuiProtocol.ServerProcessMessage.IDeviceDisconnected);
 
             /** DeviceDisconnected deviceId. */
             public deviceId: number;
@@ -1057,23 +1057,23 @@ export namespace ButtplugGuiProtocol {
              * @param [properties] Properties to set
              * @returns DeviceDisconnected instance
              */
-            public static create(properties?: ButtplugGuiProtocol.ServerProcessMessage.IDeviceDisconnected): ButtplugGuiProtocol.ServerProcessMessage.DeviceDisconnected;
+            public static create(properties?: IntifaceGuiProtocol.ServerProcessMessage.IDeviceDisconnected): IntifaceGuiProtocol.ServerProcessMessage.DeviceDisconnected;
 
             /**
-             * Encodes the specified DeviceDisconnected message. Does not implicitly {@link ButtplugGuiProtocol.ServerProcessMessage.DeviceDisconnected.verify|verify} messages.
+             * Encodes the specified DeviceDisconnected message. Does not implicitly {@link IntifaceGuiProtocol.ServerProcessMessage.DeviceDisconnected.verify|verify} messages.
              * @param message DeviceDisconnected message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encode(message: ButtplugGuiProtocol.ServerProcessMessage.IDeviceDisconnected, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encode(message: IntifaceGuiProtocol.ServerProcessMessage.IDeviceDisconnected, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
-             * Encodes the specified DeviceDisconnected message, length delimited. Does not implicitly {@link ButtplugGuiProtocol.ServerProcessMessage.DeviceDisconnected.verify|verify} messages.
+             * Encodes the specified DeviceDisconnected message, length delimited. Does not implicitly {@link IntifaceGuiProtocol.ServerProcessMessage.DeviceDisconnected.verify|verify} messages.
              * @param message DeviceDisconnected message or plain object to encode
              * @param [writer] Writer to encode to
              * @returns Writer
              */
-            public static encodeDelimited(message: ButtplugGuiProtocol.ServerProcessMessage.IDeviceDisconnected, writer?: $protobuf.Writer): $protobuf.Writer;
+            public static encodeDelimited(message: IntifaceGuiProtocol.ServerProcessMessage.IDeviceDisconnected, writer?: $protobuf.Writer): $protobuf.Writer;
 
             /**
              * Decodes a DeviceDisconnected message from the specified reader or buffer.
@@ -1083,7 +1083,7 @@ export namespace ButtplugGuiProtocol {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): ButtplugGuiProtocol.ServerProcessMessage.DeviceDisconnected;
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): IntifaceGuiProtocol.ServerProcessMessage.DeviceDisconnected;
 
             /**
              * Decodes a DeviceDisconnected message from the specified reader or buffer, length delimited.
@@ -1092,7 +1092,7 @@ export namespace ButtplugGuiProtocol {
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): ButtplugGuiProtocol.ServerProcessMessage.DeviceDisconnected;
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): IntifaceGuiProtocol.ServerProcessMessage.DeviceDisconnected;
 
             /**
              * Verifies a DeviceDisconnected message.
@@ -1106,7 +1106,7 @@ export namespace ButtplugGuiProtocol {
              * @param object Plain object
              * @returns DeviceDisconnected
              */
-            public static fromObject(object: { [k: string]: any }): ButtplugGuiProtocol.ServerProcessMessage.DeviceDisconnected;
+            public static fromObject(object: { [k: string]: any }): IntifaceGuiProtocol.ServerProcessMessage.DeviceDisconnected;
 
             /**
              * Creates a plain object from a DeviceDisconnected message. Also converts values to other types if specified.
@@ -1114,7 +1114,7 @@ export namespace ButtplugGuiProtocol {
              * @param [options] Conversion options
              * @returns Plain object
              */
-            public static toObject(message: ButtplugGuiProtocol.ServerProcessMessage.DeviceDisconnected, options?: $protobuf.IConversionOptions): { [k: string]: any };
+            public static toObject(message: IntifaceGuiProtocol.ServerProcessMessage.DeviceDisconnected, options?: $protobuf.IConversionOptions): { [k: string]: any };
 
             /**
              * Converts this DeviceDisconnected to JSON.

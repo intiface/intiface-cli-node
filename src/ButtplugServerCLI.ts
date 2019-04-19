@@ -10,7 +10,7 @@ import * as commander from "commander";
 import * as selfsigned from "selfsigned";
 import * as fs from "fs";
 import * as path from "path";
-import { ButtplugGuiProtocol } from "./buttplug-gui-proto";
+import { IntifaceGuiProtocol } from "./intiface-gui-proto";
 import { ButtplugLogger, ButtplugLogLevel } from "buttplug";
 import { ButtplugNodeBluetoothLEDeviceManager } from "buttplug-node-bluetoothle-manager";
 import { ButtplugNodeWebsocketServer } from "buttplug-node-websockets";
@@ -25,7 +25,7 @@ export class ButtplugServerCLI {
   public async RunServer() {
     this.BuildOptions();
 
-    if (commander.guipipe) {
+    if (commander.frontendpipe) {
       this._usePbOutput = true;
       // Monkey patch stdout/stderr at this point to shove everything over our pipe.
       console.log = process.stderr.write = this.SendGuiLogMessage.bind(this);
@@ -48,22 +48,12 @@ export class ButtplugServerCLI {
       return;
     }
 
-    if (!commander.websocketserver && !commander.ipcserver) {
-      console.log("Must specify either Websocket or IPC server.");
+    if (!commander.wsinsecureport && !commander.wssecureport && !commander.ipcserver) {
+      console.log("Must specify either Websocket secure or insecure port, or IPC server.");
       return;
     }
 
-    if (commander.websocketserver && commander.ipcserver) {
-      console.log("Can only run IPC or websocket server, not both.");
-      return;
-    }
-
-    if (commander.websocketserver && !commander.insecureport && !commander.secureport) {
-      console.log("Must specify either insecure or secure port for websockets.");
-      return;
-    }
-
-    if (commander.websocketserver && commander.secureport && (!commander.certfile || !commander.privfile)) {
+    if (commander.wssecureport && (!commander.wscertfile || !commander.wsprivfile)) {
       console.log("Must specify cert and privkey files for for secure websockets.");
       return;
     }
@@ -72,7 +62,7 @@ export class ButtplugServerCLI {
     // exit/Ctrl-C routes.
     this.SetupExit();
 
-    if (commander.websocketserver) {
+    if (commander.wsinsecureport || commander.wssecureport) {
       this.RunWebsocketServer();
     }
 
@@ -92,8 +82,8 @@ export class ButtplugServerCLI {
     }
     if (this._usePbOutput) {
       console.log("Stopping stdin output.");
-      const exitMsg = ButtplugGuiProtocol.ServerProcessMessage.create({
-        processEnded: ButtplugGuiProtocol.ServerProcessMessage.ProcessEnded.create(),
+      const exitMsg = IntifaceGuiProtocol.ServerProcessMessage.create({
+        processEnded: IntifaceGuiProtocol.ServerProcessMessage.ProcessEnded.create(),
       });
       this.SendMessage(exitMsg);
       process.stdin.pause();
@@ -103,23 +93,23 @@ export class ButtplugServerCLI {
   }
 
   private async OnGuiMessage(aMsg: Buffer) {
-    const msg = ButtplugGuiProtocol.ServerControlMessage.decodeDelimited(aMsg);
+    const msg = IntifaceGuiProtocol.ServerControlMessage.decodeDelimited(aMsg);
     if (msg.stop !== null) {
       await this.Shutdown();
     }
   }
 
-  private SendMessage(aMsg: ButtplugGuiProtocol.ServerProcessMessage) {
+  private SendMessage(aMsg: IntifaceGuiProtocol.ServerProcessMessage) {
     if (!this._usePbOutput) {
       return;
     }
-    const buffer = Buffer.from(ButtplugGuiProtocol.ServerProcessMessage.encodeDelimited(aMsg).finish());
+    const buffer = Buffer.from(IntifaceGuiProtocol.ServerProcessMessage.encodeDelimited(aMsg).finish());
     process.stdout.write(buffer);
   }
 
   private SendGuiLogMessage(aMsg: string) {
-    const logmsg = ButtplugGuiProtocol.ServerProcessMessage.create({
-      processLog: ButtplugGuiProtocol.ServerProcessMessage.ProcessLog.create({ message: aMsg }),
+    const logmsg = IntifaceGuiProtocol.ServerProcessMessage.create({
+      processLog: IntifaceGuiProtocol.ServerProcessMessage.ProcessLog.create({ message: aMsg }),
     });
     this.SendMessage(logmsg);
   }
@@ -154,21 +144,20 @@ export class ButtplugServerCLI {
       .option("--generatecert <path>", "Generates self signed certificate for secure websocket servers at the path specified, and exits.")
       .option("--deviceconfig <filename>", "Device configuration file (if none specified, will use internal version)")
       .option("--userdeviceconfig <filename>", "User device configuration file")
-      .option("--websocketserver", "Run websocket server", false)
     // tslint:disable-next-line max-line-length
-      .option("--websocketallinterfaces", "If passed, listen on all interfaces. Otherwise only listen on 127.0.0.1.", false)
-      .option("--insecureport <number>",
+      .option("--wsallinterfaces", "If passed, listen on all interfaces. Otherwise only listen on 127.0.0.1.", false)
+      .option("--wsinsecureport <number>",
               // tslint:disable-next-line max-line-length
               "Port to listen on for insecure websocket connections. Only listens on this port if this argument is passed.", 0)
-      .option("--secureport <number>",
+      .option("--wssecureport <number>",
               // tslint:disable-next-line max-line-length
               "Port to listen on secure websocket connections (requires cert to be passed). Only listens on this port if this argument is passed.", 0)
-      .option("--certfile <filename>", "Cert file to load for Secure Websockets.")
-      .option("--privfile <filename>", "Private key file to load for Secure Websockets.")
+      .option("--wscertfile <filename>", "Cert file to load for Secure Websockets.")
+      .option("--wsprivfile <filename>", "Private key file to load for Secure Websockets.")
       .option("--ipcserver", "Run IPC server", false)
       .option("--ipcpipe <path>", "IPC Pipe Name for IPC Server IO")
     // tslint:disable-next-line max-line-length
-      .option("--guipipe", "If passed, use protobuf protocol over stdin/out for communication with parent process.", false)
+      .option("--frontendpipe", "If passed, use protobuf protocol over stdin/out for communication with parent process.", false)
       .option("--pingtime <ping>", "Ping timeout maximum for server (in milliseconds, 0 = off/infinite ping)", 0)
       .option("--stayopen", "If passed, server will stay running after client disconnection", false)
       .option("--log <loglevel>", "Prints logs to console at specified log level.", "Off")
