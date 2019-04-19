@@ -1,3 +1,11 @@
+# Version 0.11.3-0 - 2019/04/19
+
+## Features
+
+- Changed name again from buttplug-server-gui to intiface-cli-node
+- Moved to own repo, seperate from engine, so we can iterate faster
+- Version is now [engine version]-[cli build number]
+
 # Version 0.11.0 - 2019/03/09
 
 ## Features
