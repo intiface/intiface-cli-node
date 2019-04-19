@@ -1,3 +1,9 @@
+# Version 0.11.3-2 - 2019/04/19
+
+## Bugfixes
+
+- Make process actually signify startup/ready to desktop app
+
 # Version 0.11.3-1 - 2019/04/19
 
 ## Bugfixes
