@@ -1,0 +1,46 @@
+steps:
+  - template: ./setup-variables.yml
+    parameters:
+      platform: ${{ parameters.platform }}
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '10.x'
+    displayName: 'Install Node.js'
+  
+  # Initial install will most likely fail on some platforms because
+  # noble won't build correctly, so don't && it against build/test
+  # steps.
+  - script: |
+      yarn
+    displayName: 'Install packages'
+    env: { "CI": "true" }
+  - script: |
+      yarn tslint
+    displayName: 'Lint'
+    env: { "CI": "true" }
+  - script: |
+      yarn build:main
+    displayName: 'Build'
+    env: { "CI": "true" }
+  - script: |
+      yarn freeze:${{ parameters.platform }}
+    displayName: 'Freeze server executable'
+    env: { "CI": "true" }
+  - task: CopyFiles@2
+    displayName: "Copy frozen executables to staging"
+    inputs:
+      sourceFolder: "$(System.DefaultWorkingDirectory)/intiface-cli-node"
+      contents: "*"
+      targetFolder: '$(Build.ArtifactStagingDirectory)'
+      flattenFolders: true
+  - task: ArchiveFiles@2
+    inputs:
+      rootFolderOrFile: "$(Build.ArtifactStagingDirectory)"
+      archiveFile: '$(Build.ArtifactStagingDirectory)/$(cliBuildName).zip'
+      includeRootFolder: false
+      archiveType: 'zip'
+  - task: PublishPipelineArtifact@0
+    displayName: "Publish frozen executables to artifacts"
+    inputs:
+      targetPath: '$(Build.ArtifactStagingDirectory)'
+      artifactName: '$(cliBuildName)'
