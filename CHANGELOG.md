@@ -1,3 +1,10 @@
+# Version 0.11.3-1 - 2019/04/19
+
+## Bugfixes
+
+- Change executable output name to IntifaceCLI, as expected by
+  intiface-desktop.
+
 # Version 0.11.3-0 - 2019/04/19
 
 ## Features
