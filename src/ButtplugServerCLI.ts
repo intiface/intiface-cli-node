@@ -189,17 +189,17 @@ export class ButtplugServerCLI {
     const host: string = commander.websocketallinterfaces ? "0.0.0.0" : "127.0.0.1";
 
     const wsServer = new ButtplugNodeWebsocketServer(commander.servername, commander.pingtime);
-    if (commander.secureport && commander.certfile !== undefined && commander.privfile !== undefined) {
+    if (commander.wssecureport && commander.wscertfile !== undefined && commander.wsprivfile !== undefined) {
       console.log("Starting secure websocket server");
-      wsServer.StartSecureServer(commander.certfile,
-                                 commander.privfile,
-                                 commander.secureport,
+      wsServer.StartSecureServer(commander.wscertfile,
+                                 commander.wsprivfile,
+                                 commander.wssecureport,
                                  host);
-      console.log(`Secure server listening on port ${commander.secureport}`);
-    } else if (commander.insecureport) {
+      console.log(`Secure server listening on port ${commander.wssecureport}`);
+    } else if (commander.wsinsecureport) {
       console.log("Starting insecure websocket server");
-      wsServer.StartInsecureServer(commander.insecureport, host);
-      console.log(`Insecure server listening on port ${commander.insecureport}`);
+      wsServer.StartInsecureServer(commander.wsinsecureport, host);
+      console.log(`Insecure server listening on port ${commander.wsinsecureport}`);
     }
     this._wsServer = wsServer;
     this.InitServer();
