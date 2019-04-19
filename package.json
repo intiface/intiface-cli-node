@@ -52,6 +52,7 @@
     "yarn": "^1.13.0"
   },
   "devDependencies": {
-    "trash-cli": "^1.4.0"
+    "trash-cli": "^1.4.0",
+    "tslint": "^5.16.0"
   }
 }
