@@ -62,6 +62,12 @@ export class ButtplugServerCLI {
     // exit/Ctrl-C routes.
     this.SetupExit();
 
+    if (this._usePbOutput) {
+      this.SendMessage(IntifaceGuiProtocol.ServerProcessMessage.create({
+        processStarted: IntifaceGuiProtocol.ServerProcessMessage.ProcessStarted.create(),
+      }));
+    }
+
     if (commander.wsinsecureport || commander.wssecureport) {
       this.RunWebsocketServer();
     }
