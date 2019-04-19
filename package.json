@@ -1,16 +1,16 @@
 {
-  "name": "buttplug-server-cli",
+  "name": "intiface-server-cli",
   "version": "0.11.2",
-  "description": "Node.js Server Frontend for Buttplug",
-  "homepage": "https://github.com/buttplugio/buttplug-js/packages/buttplug-server-cli#readme",
+  "description": "Node.js Server Frontend for Intiface",
+  "homepage": "https://github.com/intiface/intiface-cli-node/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/buttplugio/buttplug-js.git"
+    "url": "git+https://github.com/intiface/intiface-cli-node.git"
   },
-  "author": "The Buttplug Project Team",
+  "author": "Nonpolynomial Labs, LLC",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/buttplugio/buttplug-js/issues"
+    "url": "https://github.com/intiface/intiface-cli-node/issues"
   },
   "main": "./dist/src/index.js",
   "scripts": {
@@ -25,14 +25,33 @@
     "freeze:linux:rpi": "pkg dist/src/index.js --targets node10-linux-armv6 --output buttplug-node-server/Buttplug.Server.CLI && yarn copy:bindings:linux",
     "freeze:win-x64": "pkg dist/src/index.js --targets node10-win-x86 --output buttplug-node-server/Buttplug.Server.CLI.exe",
     "package:win": "yarn freeze:win && copy node_modules\\bluetooth-hci-socket\\build\\Release\\binding.node buttplug-node-server && copy node_modules\\usb\\src\\binding\\usb_bindings.node buttplug-node-server && 7z a buttplug-node-server.7z buttplug-node-server\\*",
-    "copy:bindings:macos": "cp ../../node_modules/noble-mac/native/noble_mac.node ./buttplug-node-server/noble_mac.node",
-    "copy:bindings:linux": "cp ../../node_modules/@abandonware/bluetooth-hci-socket/lib/binding/binding.node ./buttplug-node-server/binding.node"
+    "copy:bindings:macos": "cp ./node_modules/noble-mac/native/noble_mac.node ./buttplug-node-server/noble_mac.node",
+    "copy:bindings:linux": "cp ./node_modules/@abandonware/bluetooth-hci-socket/lib/binding/binding.node ./buttplug-node-server/binding.node"
   },
   "dependencies": {
-    "buttplug": "^0.11.2",
-    "buttplug-node-bluetoothle-manager": "^0.11.2",
-    "buttplug-node-websockets": "^0.11.2",
-    "commander": "^2.19.0",
-    "protobufjs": "^6.8.8"
+    "buttplug": "^0.11.3",
+    "buttplug-node-bluetoothle-manager": "^0.11.3",
+    "buttplug-node-websockets": "^0.11.3",
+    "commander": "^2.20.0",
+    "protobufjs": "^6.8.8",
+    "selfsigned": "^1.10.4"
+  },
+  "devDepencencies": {
+    "@types/commander": "^2.12.2",
+    "@types/jest": "^24.0.11",
+    "@types/js-yaml": "^3.12.0",
+    "@types/node": "^11.11.0",
+    "jest": "^24.3.1",
+    "pkg": "^4.3.7",
+    "ts-jest": "^24.0.0",
+    "ts-node": "^8.0.3",
+    "tslib": "^1.9.3",
+    "tslint": "^5.13.1",
+    "typedoc": "^0.14.2",
+    "typescript": "^3.3.3333",
+    "yarn": "^1.13.0"
+  },
+  "devDependencies": {
+    "trash-cli": "^1.4.0"
   }
 }

@@ -35,6 +35,7 @@ export class ButtplugServerCLI {
       console.log(`Server using protobuf based output.`);
     } else {
       console.log(`Server using string based output.`);
+      this.LogToConsole();
     }
 
     if (commander.serverversion) {
