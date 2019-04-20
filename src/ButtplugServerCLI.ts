@@ -113,8 +113,12 @@ export class ButtplugServerCLI {
       this.SendMessage(exitMsg);
       process.stdin.pause();
     }
-
-    // process.exit();
+    console.log("Exiting now.");
+    // Give things a second to try and shutdown, then just go down uncleanly.
+    setTimeout(() => {
+      console.log("Server process did not shutdown cleanly, killing internally.");
+      process.exit();
+    }, 500);
   }
 
   private async OnGuiMessage(aMsg: Buffer) {
