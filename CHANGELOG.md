@@ -1,3 +1,16 @@
+# Version 0.11.4-0 - 2019/04/20
+
+## Features
+
+- Added loading of external configuration files
+- Update dependencies, including bugfixes for websocket handling and
+  bluetooth devices in 0.11.4 of the buttplug-js dependencies
+
+## Bugfixes
+
+- Process now just calls exit on itself if it doesn't quit during
+  Shutdown.
+
 # Version 0.11.3-2 - 2019/04/19
 
 ## Bugfixes
