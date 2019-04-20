@@ -11,7 +11,7 @@ import * as selfsigned from "selfsigned";
 import * as fs from "fs";
 import * as path from "path";
 import { IntifaceGuiProtocol } from "./intiface-gui-proto";
-import { ButtplugLogger, ButtplugLogLevel } from "buttplug";
+import { ButtplugLogger, ButtplugLogLevel, DeviceConfigurationManager } from "buttplug";
 import { ButtplugNodeBluetoothLEDeviceManager } from "buttplug-node-bluetoothle-manager";
 import { ButtplugNodeWebsocketServer } from "buttplug-node-websockets";
 
@@ -46,6 +46,25 @@ export class ButtplugServerCLI {
     if (commander.generatecert) {
       this.GenerateCertificate(commander.generatecert);
       return;
+    }
+
+    // If we are passed a device configuration file, use that. Otherwise, use
+    // the one built into the library.
+    if (commander.deviceconfig) {
+      DeviceConfigurationManager.LoadFromExternalConfig(commander.deviceconfig);
+    } else {
+      DeviceConfigurationManager.LoadFromInternalConfig();
+    }
+
+    // Load an outside Configuration
+    //
+    // TODO Not yet implemented in Buttplug
+    //
+    // if (commander.userdeviceconfig) {
+    //   DeviceConfigurationManager.Manager.LoadUserConfiguration(commander.userdeviceconfig);
+    // }
+    if (commander.userdeviceconfig) {
+      throw new Error("User device configuration not currently implemented in this engine.");
     }
 
     if (!commander.wsinsecureport && !commander.wssecureport && !commander.ipcserver) {
