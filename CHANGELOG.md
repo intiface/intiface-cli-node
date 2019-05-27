@@ -1,3 +1,10 @@
+# Version 0.11.6-0 - 2019/05/27
+
+## Features
+
+- Updated dependencies, including Buttplug 0.11.6, with lots of new
+  support for Kiiroo, Libo, MagicMotion, Youcups toys.
+
 # Version 0.11.4-0 - 2019/04/20
 
 ## Features
