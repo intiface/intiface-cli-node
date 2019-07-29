@@ -1,6 +1,6 @@
 {
   "name": "intiface-server-cli",
-  "version": "0.11.6-0",
+  "version": "0.12.0-0",
   "description": "Node.js Server Frontend for Intiface",
   "homepage": "https://github.com/intiface/intiface-cli-node/",
   "repository": {
