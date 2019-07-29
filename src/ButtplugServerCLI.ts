@@ -51,7 +51,7 @@ export class ButtplugServerCLI {
     // If we are passed a device configuration file, use that. Otherwise, use
     // the one built into the library.
     if (commander.deviceconfig) {
-      DeviceConfigurationManager.LoadFromExternalConfig(commander.deviceconfig);
+      DeviceConfigurationManager.LoadFromJsonExternalConfig(commander.deviceconfig);
     } else {
       DeviceConfigurationManager.LoadFromInternalConfig();
     }
