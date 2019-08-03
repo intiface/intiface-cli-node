@@ -1,3 +1,9 @@
+# Version 0.12.0-1 - 2019/08/02
+
+## Bugfixes
+
+- Fix device config file loading argument
+
 # Version 0.12.0-0 - 2019/07/28
 
 ## Features
