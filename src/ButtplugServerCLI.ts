@@ -51,7 +51,8 @@ export class ButtplugServerCLI {
     // If we are passed a device configuration file, use that. Otherwise, use
     // the one built into the library.
     if (commander.deviceconfig) {
-      DeviceConfigurationManager.LoadFromJsonExternalConfig(commander.deviceconfig);
+      const configStr = fs.readFileSync(commander.deviceconfig).toString("utf-8");
+      DeviceConfigurationManager.LoadFromJsonExternalConfig(configStr);
     } else {
       DeviceConfigurationManager.LoadFromInternalConfig();
     }
