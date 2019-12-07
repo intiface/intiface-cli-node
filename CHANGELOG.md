@@ -1,3 +1,10 @@
+# Version 0.12.2-0 - 2019/12/06
+
+## Features
+
+- Update dependencies, including Buttplug 0.12.2, mostly device
+  additions.
+
 # Version 0.12.0-1 - 2019/08/02
 
 ## Bugfixes
