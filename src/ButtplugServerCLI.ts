@@ -200,7 +200,7 @@ export class ButtplugServerCLI {
       console.log("Please remove cert.pem and private.pem files before generating new keys.");
       return;
     }
-    const pems = selfsigned.generate(undefined, { days: 365 });
+    const pems = selfsigned.generate(undefined, { keySize: 2048, days: 365 });
     fs.writeFileSync(path.join(aPath, "cert.pem"), pems.cert);
     fs.writeFileSync(path.join(aPath, "private.pem"), pems.private);
     console.log("cert.pem and private.pem generated");
