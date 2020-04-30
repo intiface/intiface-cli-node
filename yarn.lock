@@ -2751,9 +2751,9 @@ jest@^24.9.0:
     jest-cli "^24.9.0"
 
 jquery@^3.4.1:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
-  integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.5.0.tgz#9980b97d9e4194611c36530e7dc46a58d7340fc9"
+  integrity sha512-Xb7SVYMvygPxbFMpTFQiHh1J7HClEaThguL15N/Gg37Lri/qKyhRGZYzHRyLH8Stq3Aow0LsHO2O2ci86fCrNQ==
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
@@ -3281,9 +3281,10 @@ nice-try@^1.0.4:
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
 
-"noble-mac@git+https://github.com/buttplugio/noble-mac.git#buttplugio":
+"noble-mac@https://github.com/buttplugio/noble-mac#buttplugio":
   version "0.0.4"
-  resolved "git+https://github.com/buttplugio/noble-mac.git#70a68e65677f9e746d3c011cac1dfe1f34656ad6"
+  uid "70a68e65677f9e746d3c011cac1dfe1f34656ad6"
+  resolved "https://github.com/buttplugio/noble-mac#70a68e65677f9e746d3c011cac1dfe1f34656ad6"
   dependencies:
     "@abandonware/noble" "https://github.com/abandonware/noble"
     cross-spawn "^6.0.5"
