@@ -1,3 +1,7 @@
+# DEPRECATED AND ARCHIVED
+
+This project has been superceded by [intiface-cli-rs](https://github.com/intiface/intifac-cli-rs) and will no longer be updated.
+
 # Buttplug Node.js Websocket Server
 
 [![Build Status](https://dev.azure.com/nplabs/buttplug/_apis/build/status/buttplugio.buttplug-js?branchName=master)](https://dev.azure.com/nplabs/buttplug/_build/latest?definitionId=3&branchName=master)
