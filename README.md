@@ -1,6 +1,6 @@
 # DEPRECATED AND ARCHIVED
 
-This project has been superceded by [intiface-cli-rs](https://github.com/intiface/intifac-cli-rs) and will no longer be updated.
+This project has been superceded by [intiface-cli-rs](https://github.com/intiface/intiface-cli-rs) and will no longer be updated.
 
 # Buttplug Node.js Websocket Server
 
